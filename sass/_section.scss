@@ -1,0 +1,187 @@
+// home
+
+.contenedor {
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 30px;
+
+    img {
+        width: 250px;
+        height: 100%;
+    }
+
+    .tarjeta {
+        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        border-radius: 10px;
+        .tarjeta-texto {
+            width: 100%;
+            padding: 40px 20px;
+            .titulo {
+                font-size: 1.5rem;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .descripcion {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.titulo {
+    font-size: 1,5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    margin-bottom: 20px;
+}
+
+// mixin
+
+@mixin button-style {
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    background-color: $violeta-ultra;
+    padding: 15px 0;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        background-color: $dorado-claro;
+        transition: background-color 0.3s ease;
+    }
+}
+
+
+.bt {
+    @include button-style;
+}
+
+// nosotros 
+
+.equipomorgan {
+    text-align: center;
+    margin: 120px auto; 
+}
+
+.equipomorgan img {
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px; 
+}
+
+.col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.col-md-6 p {
+    font-family: 'Arial', sans-serif; 
+}
+
+// contactanos 
+
+.contenedor-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $violeta-ultra;
+    padding: 100px;
+}
+
+.contenedor-contacto, h1 {
+    color: $dorado-claro;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map-contenedor {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.contacto-links {
+    display: flex;
+    margin-top: 10px;
+}
+
+.contacto-links a {
+    margin-right: 20px;
+}
+
+.link-img {
+    width: 20px; 
+}
+
+// rastreo 
+
+.contenedor-rastreo-padre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor-rastreo {
+    text-align: center;
+}
+
+.contenedor img {
+    max-width: 200px;
+}
+
+h2 {
+    color: $dorado-claro;
+    margin: 25px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+}
+
+input[type="submit"] {
+    background-color: $violeta-claro;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: $dorado-claro;
+}
